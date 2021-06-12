@@ -1,0 +1,108 @@
+    @import url('https//fonts.googleapis.com/css?family=Muli&display=swap');
+     :root {
+        --line-border-fill: #3498db;
+        --line-border-empty: #e0e0e0;
+    }
+    
+    * {
+        box-sizing: border-box;
+    }
+    
+    body {
+        background-color: #f6f7fb;
+        /* display: inline-block; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        overflow: hidden;
+        margin: 0%;
+        font-family: 'Muli', sans-serif;
+    }
+    
+    .container {
+        text-align: center;
+        /* display: block; */
+    }
+    
+    .progress-container {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        margin-bottom: 30px;
+        max-width: 100%;
+        width: 400px;
+    }
+    
+    .progress-container::before {
+        content: "";
+        background-color: var(--line-border-empty);
+        position: absolute;
+        top: 50%;
+        left: 0%;
+        transform: translateY(-50%);
+        height: 4%;
+        width: 100%;
+        z-index: -1;
+    }
+    
+    .progress {
+        background-color: var(--line-border-fill);
+        position: absolute;
+        top: 50%;
+        left: 0%;
+        transform: translateY(-50%);
+        height: 14%;
+        width: 50%;
+        z-index: -1;
+        transition: 0.4s ease;
+    }
+    
+    .circle {
+        background-color: white;
+        color: rgb(138, 138, 138);
+        border-radius: 50%;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 18px;
+        height: 50px;
+        width: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 3px solid var(--line-border-empty);
+        transition: .4s ease;
+    }
+    
+    .circle.active {
+        border-color: var(--line-border-fill);
+    }
+    
+    .btn {
+        background-color: var(--line-border-fill);
+        color: white;
+        border: 0;
+        border-radius: 7px;
+        cursor: pointer;
+        font-family: inherit;
+        padding: 12px 34px;
+        margin: 5px;
+        font-size: 16px;
+    }
+    
+    .btn:active {
+        transform: scale(0.98);
+    }
+    
+    .btn:focus {
+        outline: 0;
+    }
+    
+    .btn:disabled {
+        background-color: var(--line-border-empty);
+        cursor: not-allowed;
+    }
+    
+    .buttons {
+        margin-top: 8%;
+        padding-left: 22%;
+    }
